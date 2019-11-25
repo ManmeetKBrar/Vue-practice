@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Filters Vue JS</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="message">
+		<h3><u>Actual Text:</u> {{ message }}</h3>
+		<h3><u>Uppercase: </u>{{ message | uppercase }}</h3>
+		<h3><u>Capitalized:</u> {{ message | capitalize }}</h3>
+		<h3><u>Title Case:</u> {{ message | titleCase }}</h3>
+		<h3><u>Camel Case:</u> {{ message | camelCase }}</h3>
+		<h3><u>No of Letters:</u> {{ message | countLetters }}</h3>
+
+		<p><u><b>JSON rep of user object :</b></u> {{ user | json }}</p>
+		<h4>Minimum no out of {{ nos }} is {{ nos | minNo }}</h4>
+
+		<h5>Repeat filter: {{ user.country | repeatText(6) }}</h5>
+
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="filters.js"></script>
+</body>
+</html>

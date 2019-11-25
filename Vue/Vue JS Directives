@@ -1,0 +1,9 @@
+v-html
+v-bind :
+v-on @
+v-if
+v-else
+v-else if
+v-show
+v-for
+v-model

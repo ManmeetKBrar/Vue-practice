@@ -1,0 +1,28 @@
+<!--
+Step1) Add Vue Js CDN and Vue js file at end
+Step 2) Create new Vue
+Step 3) Grab the element el:
+Step 4) Carry on-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue JS</title>
+</head>
+<body>
+
+	<div id="app">
+		<h1><u>Single Interpolation:</u> {{ message }}</h1>
+		<h2><u>Multiple Interpolations:</u> Hello I am {{ first+" "+last}} from {{city}}</h2>
+		<h3><u>Usage of computed property:</u> {{ greet }}</h3>
+		<h4><u>Computed property for Date:</u> {{ now }}</h4>
+		<h1><u>Reversed String :</u> {{ stringRev }}</h1>
+		<h2><u>Sum of 2 nos :</u> {{ num1 }} + {{ num2 }} = {{ sum2nos }}</h2>
+		<div v-html="htmlContent"></div>
+		<h4><u>With v-bind:</u></h4><img v-bind:src="imgSrc1" width="200px">
+		<h4><u>With v-bind Shortcut:</u></h4><img :src="imgSrc2" width="200px">
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

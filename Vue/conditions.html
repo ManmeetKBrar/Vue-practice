@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coditions Vue JS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div id="app">
+		<div>
+			<h1 v-if="dataToggle">If Block</h1>
+			<h1 v-else>Else Block</h1>
+		</div>
+		
+		<div>
+			<button @click="dataToggle=!dataToggle" class="btn btn-outline-danger">Show/Hide</button>
+			<div v-show="dataToggle">
+				<h2>Welcome</h2>
+				<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste facere neque enim ipsam officiis, rerum facilis. Repellat, harum. Doloremque minima nulla deserunt porro quia excepturi non optio, commodi placeat iusto.</h4>
+			</div>
+		</div>
+
+		<div>
+			<h3>
+				<ol>
+					<li v-for="name in names">{{name}}</li>
+				</ol>
+			</h3>
+		</div>
+
+		<div>
+			<h3>
+				<ol>
+					<li v-for="data in datas">{{data.name}} is {{ data.age }} years old.</li>
+				</ol>
+			</h3>
+		</div>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="conditions.js"></script>
+</body>
+</html>

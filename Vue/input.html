@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Input Vue JS</title>
+</head>
+<body>
+	<div id="app" class="container">
+		<div>
+			<input type="text" v-model="name_data" placeholder="Enter Name..">
+			<h2>Your Name is: <u>{{ name_data }}</u></h2>
+		</div>
+
+		<div>
+			<input type="checkbox" id="mychkbx" v-model="check_data">
+			<label for="mychkbx">{{ check_data }}</label>
+		</div>
+
+		<div>
+			<input type="checkbox" id="harry" value="Harry" v-model="checkedNames">
+			<label for="harry">Harry</label>
+			<input type="checkbox" id="ron" value="Ron" v-model="checkedNames">
+			<label for="ron">Ron</label>
+			<input type="checkbox" id="hermione" value="Hermione" v-model="checkedNames">
+			<label for="hermione">Hermione</label>
+			<br/>
+			<h3>Checked Names: {{ checkedNames }}</h3>
+		</div>
+
+		<div>
+			<input type="radio" value="Male" v-model="picked">Male
+			<input type="radio" value="FeMale" v-model="picked">FeMale<br/>
+			<h3>Picked Gender: {{ picked }}</h3>
+		</div>
+
+		<div>
+			<select name="friends" v-model="selected">
+				<option v-for="data in datas" :value="data">{{ data }}</option>
+			</select>
+			<h3>Selected: {{ selected }}</h3>
+		</div>
+
+		<div>
+			<select name="friendsmul" v-model="selectedMul" multiple>
+				<option v-for="data in datas" :value="data">{{ data }}</option>
+			</select>
+			<h3>Selected: {{ selectedMul }}</h3>
+		</div>
+
+		<div>
+			<input type="number" v-model.number="num1">
+			+
+			<input type="number" v-model.number="num2">
+			<h3>{{ sum }}</h3>
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="input.js"></script>
+</body>
+</html>

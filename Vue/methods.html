@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue JS Methods</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid" id="app">
+	<h1>{{ message }}</h1>
+	<button v-on:click="message='Changed directly'" class="btn btn-success">Normal Change</button>
+	<button @click="changeText" class="btn btn-warning">With Method</button>
+
+	<h5>{{ date }}</h5>
+	<button @click="showDate" class="btn btn-info">Show Date</button>
+
+	<h5>{{ counter }}</h5>
+	<button @click="counterData" class="btn btn-info">Count</button><br>
+
+	<br/><h1 :style={color:txtColor,background:bgColor}>Manmeet</h1>
+	<button @click="changeColor" class="btn btn-danger">Change Color</button>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="methods.js"></script>
+</body>
+</html>
